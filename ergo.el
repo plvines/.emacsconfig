@@ -25,6 +25,7 @@
 ;load a file named key-chord.el from some directory in the load-path (e.g. "~/.emacsconfig")
 (add-to-list 'load-path "~/.emacsconfig/")
 (require 'key-chord)
+(require 'go-mode-load)
 (key-chord-mode 1)
 (key-chord-define-global "jk" 'evil-normal-state)
 
