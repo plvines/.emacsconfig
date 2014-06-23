@@ -161,8 +161,8 @@
 (define-key evil-visual-state-map (kbd "v") 'evil-search-forward)
 
 ; save buffer = w-e
-(key-chord-define evil-normal-state-map "we" 'save-some-buffers)
-(key-chord-define evil-visual-state-map "we" 'save-some-buffers)
+(key-chord-define evil-normal-state-map "we" 'save-buffer)
+(key-chord-define evil-visual-state-map "we" 'save-buffer)
 
 ; write file = w-r
 (key-chord-define evil-normal-state-map "wr" 'write-file)
