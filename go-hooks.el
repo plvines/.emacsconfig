@@ -1,0 +1,1 @@
+; hooks for go-mode specific bindings

@@ -213,18 +213,18 @@
                     (shell)
                     (rename-buffer x)
                     )
-(define-key evil-normal-state-map (kbd "`") 'open-shell-here)
-(define-key evil-visual-state-map (kbd "`") 'open-shell-here)
+(define-key evil-normal-state-map (kbd "1") 'open-shell-here)
+(define-key evil-visual-state-map (kbd "1") 'open-shell-here)
 
 ; kill this buffer = 1
-(define-key evil-normal-state-map (kbd "1") 'kill-this-buffer)
-(define-key evil-visual-state-map (kbd "1") 'kill-this-buffer)
+(define-key evil-normal-state-map (kbd "2") 'kill-this-buffer)
+(define-key evil-visual-state-map (kbd "2") 'kill-this-buffer)
 
 ; find & replace string = 2
-(define-key evil-normal-state-map (kbd "2") 'query-replace)
+(define-key evil-normal-state-map (kbd "3") 'query-replace)
 
 ; universal argument = 3
-(define-key evil-normal-state-map (kbd "3") 'universal-argument)
+(define-key evil-normal-state-map (kbd "4") 'universal-argument)
 
 ; reformat paragraph
 (key-chord-define evil-normal-state-map "zx" 'fill-paragraph)
