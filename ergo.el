@@ -118,6 +118,16 @@
 (define-key evil-normal-state-map (kbd "s") 'evil-insert)
 (define-key evil-motion-state-map (kbd "s") 'evil-insert)
 
+; insert and new line
+
+; change
+(define-key evil-normal-state-map (kbd "c") 'evil-change)
+(define-key evil-visual-state-map (kbd "c") 'evil-change)
+
+;  append = f
+(define-key evil-normal-state-map (kbd "f") 'evil-append)
+(define-key evil-normal-state-map (kbd "f") 'evil-append)
+
 ; delete state = d
 (define-key evil-normal-state-map (kbd "d") 'evil-delete)
 (define-key evil-motion-state-map (kbd "d") 'evil-delete)
@@ -129,9 +139,9 @@
 (define-key evil-normal-state-map (kbd "a") 'evil-insert-line)
 (define-key evil-motion-state-map (kbd "a") 'evil-insert-line)
 
-; append at end of line = f
-(define-key evil-normal-state-map (kbd "f") 'evil-append-line)
-(define-key evil-motion-state-map (kbd "f") 'evil-append-line)
+; append at end of line = g 
+(define-key evil-normal-state-map (kbd "g") 'evil-append-line)
+(define-key evil-motion-state-map (kbd "g") 'evil-append-line)
 
 ; save region = w
 (define-key evil-normal-state-map (kbd "w") 'kill-ring-save)
@@ -140,6 +150,10 @@
 ; yank = e
 (define-key evil-normal-state-map (kbd "e") 'yank)
 (define-key evil-motion-state-map (kbd "e") 'yank)
+
+; yank-pop
+(key-chord-define evil-normal-state-map "er" 'yank-pop)
+
 
 ; kill region = q
 (define-key evil-normal-state-map (kbd "q") 'kill-region)
@@ -198,11 +212,11 @@
 (key-chord-define evil-normal-state-map "io" 'kmacro-end-macro)
 (key-chord-define evil-visual-state-map "io" 'kmacro-end-macro)
 
-; comment = c
-(define-key evil-normal-state-map (kbd "c") 'comment-or-uncomment-region)
+; comment = x
+(define-key evil-normal-state-map (kbd "x") 'comment-or-uncomment-region)
 
-; indent = x
-(define-key evil-normal-state-map (kbd "x") 'indent-for-tab-command)
+; indent
+;; (define-key evil-normal-state-map (kbd "x") 'indent-for-tab-command)
 
 ; switch buffers = t
 (define-key evil-normal-state-map (kbd "t") 'switch-to-buffer)
@@ -239,17 +253,17 @@
 (defun brackets  ()
   (interactive)
   (insert "[]")
-  (left-char 1)
+  (backward-char 1)
   )
 (defun parens  ()
   (interactive)
   (insert "()")
-  (left-char 1)
+  (backward-char 1)
   )
 (defun curlies  ()
   (interactive)
   (insert "{}")
-  (left-char 1)
+  (backward-char 1)
   (newline 2)
   (indent-for-tab-command)
   (previous-line 1)
