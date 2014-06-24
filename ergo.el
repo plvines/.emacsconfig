@@ -32,14 +32,14 @@
 ;; ====== RIGHT HAND =====
 
 ; forward-word-begin = l
-(define-key evil-normal-state-map "l" 'evil-forward-WORD-begin)
-(define-key evil-motion-state-map "l" 'evil-forward-WORD-begin)
-(define-key evil-visual-state-map "l" 'evil-forward-WORD-begin)
+(define-key evil-normal-state-map "l" 'forward-word)
+(define-key evil-motion-state-map "l" 'forward-word)
+(define-key evil-visual-state-map "l" 'forward-word)
 
 ; backword-word-end = h
-(define-key evil-normal-state-map "h" 'evil-backward-WORD-end)
-(define-key evil-motion-state-map "h" 'evil-backward-WORD-end)
-(define-key evil-visual-state-map "h" 'evil-backward-WORD-end)
+(define-key evil-normal-state-map "h" 'backward-word)
+(define-key evil-motion-state-map "h" 'backward-word)
+(define-key evil-visual-state-map "h" 'backward-word)
 
 ; forward-char = o
 (define-key evil-normal-state-map "o" 'evil-forward-char)
@@ -268,3 +268,4 @@
 ;;  (let (evil-mode-map-alist)
 ;;    (call-interactively (key-binding (this-command-keys)))))
 
+(load-file "~/.emacsconfig/go-hooks.el")
