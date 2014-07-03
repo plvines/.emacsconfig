@@ -114,6 +114,9 @@
 
 ;; ====== LEFT HAND =====
 
+; indent = TAB
+(define-key evil-normal-state-map (kbd "s") 'indent-for-tab-command)
+
 ; insert = s
 (define-key evil-normal-state-map (kbd "s") 'evil-insert)
 (define-key evil-motion-state-map (kbd "s") 'evil-insert)
@@ -214,6 +217,17 @@
 
 ; comment = x
 (define-key evil-normal-state-map (kbd "x") 'comment-or-uncomment-region)
+
+;; ; comment this line = xx
+;; (defun comment-line (x)
+;;   (interactive "shelp")
+;;   (evil-beginning-of-line)
+;;   (evil-visual-state)
+;;   (evil-end-of-line)
+;;   (comment-or-uncomment-region)
+;;   (evil-normal-mode)
+;; )
+;; (key-chord-define evil-normal-state-map "xx" 'comment-line)
 
 ; indent
 ;; (define-key evil-normal-state-map (kbd "x") 'indent-for-tab-command)
