@@ -151,12 +151,12 @@
 (define-key evil-motion-state-map (kbd "w") 'kill-ring-save)
 
 ; yank = e
-(define-key evil-normal-state-map (kbd "e") 'yank)
-(define-key evil-motion-state-map (kbd "e") 'yank)
+(define-key evil-normal-state-map (kbd "e") 'evil-paste-after)
+(define-key evil-motion-state-map (kbd "e") 'evil-paste-after)
 
 ; yank-pop
 (key-chord-define evil-normal-state-map "er" 'yank-pop)
-
+(key-chord-define evil-motion-state-map "er" 'yank-pop)
 
 ; kill region = q
 (define-key evil-normal-state-map (kbd "q") 'kill-region)
