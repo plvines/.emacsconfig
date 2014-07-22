@@ -151,8 +151,8 @@
 (define-key evil-motion-state-map (kbd "w") 'kill-ring-save)
 
 ; yank = e
-(define-key evil-normal-state-map (kbd "e") 'evil-paste-after)
-(define-key evil-motion-state-map (kbd "e") 'evil-paste-after)
+(define-key evil-normal-state-map (kbd "e") 'evil-paste-before)
+(define-key evil-motion-state-map (kbd "e") 'evil-paste-before)
 
 ; yank-pop
 (key-chord-define evil-normal-state-map "er" 'yank-pop)
