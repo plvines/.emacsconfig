@@ -283,9 +283,9 @@
   (previous-line 1)
   (indent-for-tab-command)
   )
-(key-chord-define evil-insert-state-map "YU"  'parens)
-(key-chord-define evil-insert-state-map "UI"  'brackets)
-(key-chord-define evil-insert-state-map "IO"  'curlies)
+;(key-chord-define evil-insert-state-map "YU"  'parens)
+;(key-chord-define evil-insert-state-map "UI"  'brackets)
+;(key-chord-define evil-insert-state-map "IO"  'curlies)
 
 (global-set-key (kbd "C-o") 'shrink-window-horizontally)
 (global-set-key (kbd "C-p") 'enlarge-window-horizontally)
