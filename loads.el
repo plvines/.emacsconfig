@@ -37,9 +37,7 @@
 ;; (setq jedi:setup-keys t)                      ; optional
 ;; (setq jedi:complete-on-dot t)                 ; optional
 
-(require 'lambda-mode)
-(add-hook 'python-mode-hook #'lambda-mode 1)
-(setq lambda-symbol (string (make-char 'greek-iso8859-7 107)))
+(require 'pretty-lambdada)
 
 (require 'autopair)
 (autopair-global-mode t)
@@ -47,7 +45,6 @@
 (add-to-list 'load-path "~/.emacs.d/dash")
 (add-to-list 'load-path "~/.emacs.d/flycheck")
 (require 'flycheck)
-(require 'python-pylint)
 
 (add-to-list 'load-path "~/.emacs.d/flycheck-tip")
 (require `flycheck-tip)
