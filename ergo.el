@@ -29,6 +29,7 @@
 (key-chord-mode 1)
 (key-chord-define-global "jk" 'evil-normal-state)
 
+
 ;; ====== RIGHT HAND =====
 
 ; forward-word-begin = l
@@ -189,8 +190,7 @@
 (key-chord-define evil-normal-state-map "qr" 'find-file)
 (key-chord-define evil-visual-state-map "qr" 'find-file)
 
-; undo = hl or I
-(key-chord-define evil-normal-state-map "hl" 'undo)
+; undo = I
 (define-key evil-normal-state-map (kbd "I") 'undo)
 (define-key evil-motion-state-map (kbd "I") 'undo)
 
@@ -295,5 +295,6 @@
 ;;  (interactive)
 ;;  (let (evil-mode-map-alist)
 ;;    (call-interactively (key-binding (this-command-keys)))))
+
 
 (load-file "~/.emacsconfig/go-hooks.el")
