@@ -1,6 +1,13 @@
 (windmove-default-keybindings 'super)
 
-(tool-bar-mode 0)
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+;(tool-bar-mode 0)
 (show-paren-mode t)
 (setq show-paren-style 'mixed)
 
@@ -297,3 +304,5 @@
 ;;    (call-interactively (key-binding (this-command-keys)))))
 
 (load-file "~/.emacsconfig/go-hooks.el")
+
+(global-set-key (kbd "C-0") 'compile)
