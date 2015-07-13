@@ -265,6 +265,8 @@
 (key-chord-define evil-normal-state-map "zx" 'fill-paragraph)
 (key-chord-define evil-visual-state-map "zx" 'fill-paragraph)
 
+(key-chord-define evil-normal-state-map "iu" 'flycheck-tip-cycle)
+(key-chord-define evil-motion-state-map "iu" 'flycheck-tip-cycle)
 
 ;; ===== INSERT =====
 ; type _ = space-space
