@@ -60,15 +60,15 @@
 (define-key evil-motion-state-map "y" 'evil-backward-char)
 (define-key evil-visual-state-map "y" 'evil-backward-char)
 
-; move next line = k
-(define-key evil-normal-state-map "k" 'evil-next-line)
-(define-key evil-motion-state-map "k" 'evil-next-line)
-(define-key evil-visual-state-map "k" 'evil-next-line)
+; move next line = j
+(define-key evil-normal-state-map "j" 'evil-next-line)
+(define-key evil-motion-state-map "j" 'evil-next-line)
+(define-key evil-visual-state-map "j" 'evil-next-line)
 
-; move previous line = j
-(define-key evil-normal-state-map "j" 'evil-previous-line)
-(define-key evil-motion-state-map "j" 'evil-previous-line)
-(define-key evil-visual-state-map "j" 'evil-previous-line)
+; move previous line = k 
+(define-key evil-normal-state-map "k" 'evil-previous-line)
+(define-key evil-motion-state-map "k" 'evil-previous-line)
+(define-key evil-visual-state-map "k" 'evil-previous-line)
 
 ; move half-screen up = m
 (defun half-screen-up ()
@@ -77,9 +77,9 @@
                     (evil-scroll-line-up 10)
                     )
 
-(define-key evil-normal-state-map (kbd "m") 'evil-scroll-page-up)
-(define-key evil-motion-state-map (kbd "m") 'evil-scroll-page-up)
-(define-key evil-visual-state-map (kbd "m") 'evil-scroll-page-up)
+(define-key evil-normal-state-map (kbd ",") 'evil-scroll-page-up)
+(define-key evil-motion-state-map (kbd ",") 'evil-scroll-page-up)
+(define-key evil-visual-state-map (kbd ",") 'evil-scroll-page-up)
 
 ; move half-screen down = ,
 (defun half-screen-down ()
@@ -87,9 +87,9 @@
                     (next-line 10)
                     (evil-scroll-line-up 10)
                     )
-(define-key evil-normal-state-map (kbd ",") 'evil-scroll-page-down)
-(define-key evil-motion-state-map (kbd ",") 'evil-scroll-page-down)
-(define-key evil-visual-state-map (kbd ",") 'evil-scroll-page-down)
+(define-key evil-normal-state-map (kbd "m") 'evil-scroll-page-down)
+(define-key evil-motion-state-map (kbd "m") 'evil-scroll-page-down)
+(define-key evil-visual-state-map (kbd "m") 'evil-scroll-page-down)
 
 ; move to beginning of line = n
 (define-key evil-normal-state-map (kbd "n") 'evil-beginning-of-line)
@@ -270,7 +270,7 @@
 
 ;; ===== INSERT =====
 ; type _ = space-space
-(key-chord-define evil-insert-state-map "  " (kbd "_"))
+;; (key-chord-define evil-insert-state-map "  " (kbd "_"))
 
 ;; === inserting/formatting (), [], and {}
 (defun brackets  ()

@@ -1,7 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/exec-path-from-shell/")
-(require 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
-
 (require 'desktop) (desktop-save-mode 1) (defun my-desktop-save ()
 (interactive) ;; Don't call desktop-save-in-desktop-dir, as it prints message.  
 (if (eq (desktop-owner) (emacs-pid)) (desktop-save desktop-dirname))) (add-hook 'auto-save-hook 'my-desktop-save)
@@ -38,9 +34,6 @@
 ;; (setq jedi:complete-on-dot t)                 ; optional
 
 (require 'pretty-lambdada)
-
-(require 'autopair)
-(autopair-global-mode t)
 
 (add-to-list 'load-path "~/.emacs.d/dash")
 (add-to-list 'load-path "~/.emacs.d/flycheck")
