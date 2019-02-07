@@ -306,6 +306,6 @@
 ;;    (call-interactively (key-binding (this-command-keys)))))
 
 
-(load-file "~/.emacsconfig/go-hooks.el")
+;; (load-file "~/.emacsconfig/go-hooks.el")
 
 (global-set-key (kbd "C-0") 'compile)
