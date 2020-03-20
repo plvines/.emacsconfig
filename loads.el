@@ -33,7 +33,7 @@
 ;; (setq jedi:setup-keys t)                      ; optional
 ;; (setq jedi:complete-on-dot t)                 ; optional
 
-(require 'pretty-lambdada)
+;; (require 'pretty-lambdada)
 
 (add-to-list 'load-path "~/.emacs.d/dash")
 (add-to-list 'load-path "~/.emacs.d/flycheck")
@@ -47,4 +47,3 @@
 
 (auto-revert-mode 1)
 
-(load-file "~/.emacsconfig/ergo.el")

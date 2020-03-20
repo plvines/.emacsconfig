@@ -36,7 +36,6 @@
 (key-chord-mode 1)
 (key-chord-define-global "jk" 'evil-normal-state)
 
-
 ;; ====== RIGHT HAND =====
 
 ; forward-word-begin = l
@@ -81,6 +80,11 @@
 (define-key evil-motion-state-map (kbd ",") 'evil-scroll-page-up)
 (define-key evil-visual-state-map (kbd ",") 'evil-scroll-page-up)
 
+(key-chord-define evil-normal-state-map " ," 'beginning-of-buffer)
+(key-chord-define evil-normal-state-map " ," 'beginning-of-buffer)
+(key-chord-define evil-normal-state-map " ," 'beginning-of-buffer)
+
+
 ; move half-screen down = ,
 (defun half-screen-down ()
                     (interactive)
@@ -90,6 +94,10 @@
 (define-key evil-normal-state-map (kbd "m") 'evil-scroll-page-down)
 (define-key evil-motion-state-map (kbd "m") 'evil-scroll-page-down)
 (define-key evil-visual-state-map (kbd "m") 'evil-scroll-page-down)
+
+(key-chord-define evil-normal-state-map " m" 'end-of-buffer)
+(key-chord-define evil-normal-state-map " m" 'end-of-buffer)
+(key-chord-define evil-normal-state-map " m" 'end-of-buffer)
 
 ; move to beginning of line = n
 (define-key evil-normal-state-map (kbd "n") 'evil-beginning-of-line)
@@ -112,13 +120,18 @@
 (define-key evil-visual-state-map (kbd "i") 'evil-search-next)
 
 ; command = ;
-(define-key evil-normal-state-map (kbd ";") 'execute-extended-command)
-(define-key evil-motion-state-map (kbd ";") 'execute-extended-command)
-(define-key evil-visual-state-map (kbd ";") 'execute-extended-command)
+;; (define-key evil-normal-state-map (kbd ";") 'execute-extended-command)
+;; (define-key evil-motion-state-map (kbd ";") 'execute-extended-command)
+;; (define-key evil-visual-state-map (kbd ";") 'execute-extended-command)
+(key-chord-define evil-normal-state-map " ;" 'execute-extended-command)
+(key-chord-define evil-motion-state-map " ;" 'execute-extended-command)
+(key-chord-define evil-visual-state-map " ;" 'execute-extended-command)
+
 
 ; center at current line = SPC
-(define-key evil-normal-state-map (kbd "SPC") 'recenter-top-bottom)
-(define-key evil-motion-state-map (kbd "SPC") 'recenter-top-bottom)
+; center at current line = ;
+(define-key evil-normal-state-map (kbd ";") 'recenter-top-bottom)
+(define-key evil-motion-state-map (kbd ";") 'recenter-top-bottom)
 
 ;; ====== LEFT HAND =====
 
@@ -202,13 +215,14 @@
 (define-key evil-motion-state-map (kbd "I") 'undo)
 
 ; navigating windows 
-(global-set-key (kbd "C-l") 'windmove-right)
-(global-set-key (kbd "C-h") 'windmove-left)
-(global-set-key (kbd "C-j") 'windmove-up)
-(global-set-key (kbd "C-k") 'windmove-down)
-
-
-; insert pairs of (), [], {}
+(key-chord-define evil-normal-state-map (kbd "jl") 'windmove-right)
+(key-chord-define evil-normal-state-map (kbd "kh") 'windmove-left)
+(key-chord-define evil-normal-state-map (kbd "hj") 'windmove-down)
+(key-chord-define evil-normal-state-map (kbd "lk") 'windmove-up)
+;; (global-set-key (kbd "C-l") 'windmove-right)
+;; (global-set-key (kbd "C-h") 'windmove-left)
+;; (global-set-key (kbd "C-j") 'windmove-down)
+;; (global-set-key (kbd "C-k") 'windmove-up)
 
 ; repeat last macro = q-q
 (key-chord-define evil-normal-state-map "qq" 'call-last-kbd-macro)
