@@ -1,0 +1,12 @@
+sudo apt install curl git-core gcc make zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libssl-dev
+git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+exec $SHELL
+
+git clone https://github.com/yyuu/pyenv-virtualenv.git   $HOME/.pyenv/plugins/pyenv-virtualenv
+PYENV_VERSION=system pip3 install --user pipx
+git clone https://github.com/jawshooah/pyenv-default-packages.git $(pyenv root)/plugins/pyenv-default-packages
+
+echo "ipdb\nelpy\njedi\nepc\nimportmagic\nflake8\nautoflake\nisort\ndocformatter" > $HOME/.pyenv/default-packages
+pyenv install 3.6.9
+pyenv install 3.8.2
+echo 3.6.9 > .pyenv/version

@@ -64,7 +64,7 @@
 (define-key evil-motion-state-map "j" 'evil-next-line)
 (define-key evil-visual-state-map "j" 'evil-next-line)
 
-; move previous line = k 
+; move previous line = k
 (define-key evil-normal-state-map "k" 'evil-previous-line)
 (define-key evil-motion-state-map "k" 'evil-previous-line)
 (define-key evil-visual-state-map "k" 'evil-previous-line)
@@ -127,6 +127,14 @@
 (key-chord-define evil-motion-state-map " ;" 'execute-extended-command)
 (key-chord-define evil-visual-state-map " ;" 'execute-extended-command)
 
+; jump to matching delimiter
+(key-chord-define evil-normal-state-map " [" 'backward-sexp)
+(key-chord-define evil-motion-state-map " [" 'backward-sexp)
+(key-chord-define evil-visual-state-map " [" 'backward-sexp)
+(key-chord-define evil-normal-state-map " ]" 'forward-sexp)
+(key-chord-define evil-motion-state-map " ]" 'forward-sexp)
+(key-chord-define evil-visual-state-map " ]" 'forward-sexp)
+
 
 ; center at current line = SPC
 ; center at current line = ;
@@ -163,7 +171,7 @@
 (define-key evil-normal-state-map (kbd "a") 'evil-insert-line)
 (define-key evil-motion-state-map (kbd "a") 'evil-insert-line)
 
-; append at end of line = g 
+; append at end of line = g
 (define-key evil-normal-state-map (kbd "g") 'evil-append-line)
 (define-key evil-motion-state-map (kbd "g") 'evil-append-line)
 
@@ -186,7 +194,7 @@
 ; enter visual state = r
 (define-key evil-normal-state-map (kbd "r") 'evil-visual-state)
 
-; replace = z 
+; replace = z
 (define-key evil-normal-state-map (kbd "z") 'evil-replace-state)
 (define-key evil-motion-state-map (kbd "z") 'evil-replace-state)
 
@@ -214,7 +222,7 @@
 (define-key evil-normal-state-map (kbd "I") 'undo)
 (define-key evil-motion-state-map (kbd "I") 'undo)
 
-; navigating windows 
+; navigating windows
 (key-chord-define evil-normal-state-map (kbd "jl") 'windmove-right)
 (key-chord-define evil-normal-state-map (kbd "kh") 'windmove-left)
 (key-chord-define evil-normal-state-map (kbd "hj") 'windmove-down)
