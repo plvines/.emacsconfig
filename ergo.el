@@ -30,9 +30,8 @@
 
 
 ;load a file named key-chord.el from some directory in the load-path (e.g. "~/.emacsconfig")
-(add-to-list 'load-path "~/.emacsconfig/")
-(require 'key-chord)
-(require 'go-mode-load)
+(use-package key-chord)
+
 (key-chord-mode 1)
 (key-chord-define-global "jk" 'evil-normal-state)
 
@@ -142,9 +141,6 @@
 (define-key evil-motion-state-map (kbd ";") 'recenter-top-bottom)
 
 ;; ====== LEFT HAND =====
-
-; indent = TAB
-(define-key evil-normal-state-map (kbd "s") 'indent-for-tab-command)
 
 ; insert = s
 (define-key evil-normal-state-map (kbd "s") 'evil-insert)

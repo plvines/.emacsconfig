@@ -6,7 +6,7 @@ git clone https://github.com/yyuu/pyenv-virtualenv.git   $HOME/.pyenv/plugins/py
 PYENV_VERSION=system pip3 install --user pipx
 git clone https://github.com/jawshooah/pyenv-default-packages.git $(pyenv root)/plugins/pyenv-default-packages
 
-echo "ipdb\nelpy\njedi\nepc\nimportmagic\nflake8\nautoflake\nisort\ndocformatter" > $HOME/.pyenv/default-packages
+echo "ipdb\nelpy\njedi\nepc\nimportmagic\nflake8\nautoflake\nisort\ndocformatter\nblack" > $HOME/.pyenv/default-packages
 pyenv install 3.6.9
 pyenv install 3.8.2
 echo 3.6.9 > .pyenv/version

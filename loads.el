@@ -3,6 +3,7 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+(use-package projectile)
 
 ;; Bootstrap 'use-package'
 (eval-after-load 'gnutls
@@ -14,6 +15,8 @@
   (require 'use-package))
 (require 'bind-key)
 (setq use-package-always-ensure t)
+
+(load "~/.emacsconfig/ergo.el")
 
 ;; Loads straight.el
 (defvar bootstrap-version)
@@ -81,3 +84,4 @@
 (load "~/.emacsconfig/modeline.el")
 
 (load "~/.emacsconfig/py-ide.el")
+; (use-package 'go-mode-load)

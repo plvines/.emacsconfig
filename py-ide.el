@@ -105,3 +105,15 @@
 ;;       (if (string-equal "Python" (format-mode-line mode-name nil nil curr))
 ;;           (pyenv-use-corresponding)))
 ;;     (add-hook 'switch-buffer-functions 'pyenv-update-on-buffer-switch))
+
+(key-chord-define evil-normal-state-map " i" 'xref-find-references)
+(key-chord-define evil-normal-state-map " u" 'xref-find-definitions-other-window)
+(key-chord-define evil-normal-state-map " z" 'elpy-occur-definitions)
+(key-chord-define evil-normal-state-map " p" 'elpy-shell-send-statement-and-step)
+(key-chord-define evil-normal-state-map " P" 'elpy-shell-send-statement-and-go)
+(key-chord-define evil-normal-state-map " [" 'elpy-shell-send-region-or-buffer-and-go)
+(key-chord-define evil-normal-state-map " f" 'elpy-format)
+
+;; (advice-add 'elpy-multiedit-python-symbol-at-point :after #'evil-insert)
+;; (key-chord-define evil-normal-state-map " c" 'elpy-multiedit-python-symbol-at-point-evil)
+;; (key-chord-define evil-normal-state-map " c" ')
