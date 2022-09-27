@@ -190,9 +190,9 @@
 ; enter visual state = r
 (define-key evil-normal-state-map (kbd "r") 'evil-visual-state)
 
-; replace = z
-(define-key evil-normal-state-map (kbd "z") 'evil-replace-state)
-(define-key evil-motion-state-map (kbd "z") 'evil-replace-state)
+; save buffer = z
+(define-key evil-normal-state-map (kbd "z") 'save-buffer)
+(define-key evil-motion-state-map (kbd "z") 'save-buffer)
 
 ; search backward = v-v
 (key-chord-define evil-normal-state-map (kbd "vv") 'evil-search-backward)
@@ -201,10 +201,6 @@
 ; search forward = v
 (define-key evil-normal-state-map (kbd "v") 'evil-search-forward)
 (define-key evil-visual-state-map (kbd "v") 'evil-search-forward)
-
-; save buffer = w-e
-(key-chord-define evil-normal-state-map "we" 'save-buffer)
-(key-chord-define evil-visual-state-map "we" 'save-buffer)
 
 ; write file = w-r
 (key-chord-define evil-normal-state-map "wr" 'write-file)
